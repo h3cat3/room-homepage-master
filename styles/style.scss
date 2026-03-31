@@ -1,0 +1,62 @@
+@use "./colors" as *;
+@use "./typoghraphy" as *;
+@use "./spacing" as *;
+@use "./base" as *;
+
+.card {
+    position: relative ;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "League Spartan", sans-serif;
+}
+.nav {
+    position: absolute;
+    top: var(--spacing-600);
+    left: var(--spacing-300);
+
+    width: 100%;
+    height: 0.875rem;
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-600);
+    @media (min-width: 48rem) {
+        left: var(--spacing-800);
+    }
+    @media (min-width: 64rem) {
+        top: var(--spacing-800);
+    }
+
+    &__img-menu {
+        height: 0.875rem;
+        width: 1.25rem;
+        @media (min-width: 64rem) {
+            display: none  ;
+        }
+    }
+    &__img-logo {
+        height: 1.5rem;
+        width: 3.875rem;
+        position: absolute;
+        left: 35%;
+        @media (min-width: 64rem) {
+            position: relative;
+            left: 0;
+        }
+    }
+    &__links {
+        display: none;
+        @media (min-width: 64rem) {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: var(--spacing-400);
+            color: var(--white);
+            @include text-style(text-3-semibold);
+            
+        }
+    }
+}

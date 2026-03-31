@@ -1,0 +1,17 @@
+$typography: (
+    text-1: (3rem, 90%, -0.125rem, 600),
+    text-2: (2.5rem, 100%, -0.125rem, 600),
+    text-3-bold: (1rem, 140%, 0.4375rem, 700),
+    text-3-semibold: (1rem, 100%, -0.004375rem, 600),
+    text-3-medium: (1rem, 140%, -0.003125rem, 500),
+    text-4: (0.9375rem, 100%, 0.78125rem, 500),
+);
+
+@mixin text-style($name) {
+    $value: map-get($typography, $name);
+
+    font-size: nth($value, 1);
+    line-height: nth($value, 2);
+    letter-spacing: nth($value, 3);
+    font-weight: nth($value, 4);
+}
