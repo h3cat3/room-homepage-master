@@ -11,6 +11,8 @@
     align-items: center;
     justify-content: center;
     font-family: "League Spartan", sans-serif;
+    color: var(--grey-500);
+    @include text-style(text-3-medium);
 }
 .nav {
     position: absolute;
@@ -45,6 +47,7 @@
         @media (min-width: 64rem) {
             position: relative;
             left: 0;
+            margin-left: var(--spacing-800);
         }
     }
     &__links {
@@ -58,5 +61,104 @@
             @include text-style(text-3-semibold);
             
         }
+    }
+}
+.main {
+    @media (min-width: 64rem) {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    
+    &__img {
+        
+        width: 100%;
+        @media (min-width: 64rem) {
+            grid-column: 1 / 2;
+            object-fit: cover;
+            height: 100%;
+        }
+    }  
+    &__content-box {
+        position: relative;
+        padding: var(--spacing-800) var(--spacing-300);
+        @media (min-width: 48rem) {
+            padding-inline: var(--spacing-800);
+        }
+        @media (min-width: 64rem) {
+            width: auto;
+            grid-column: 2 / 3;
+        }
+    } 
+    &__slider {
+        position: absolute;
+        right: 0;
+        top: -3.9rem;
+        
+        width: 7rem;
+        height: 3.5rem  ;
+        display: flex;
+        justify-content: space-evenly;
+        gap: var(--spacing-0);
+        @media (min-width: 48rem) {
+            width: 10rem;
+            height: 5rem;
+            top:-5.4rem;
+        }
+        @media (min-width: 64rem) {
+            bottom: 0;
+            left: 0;
+            top: auto;
+        }
+    }
+    &__slider-btn {
+        background-color: var(--black);
+        flex-grow: 1;   
+    }
+    &__title {
+        color: var(--black);
+        @include text-style(text-2);
+        margin-bottom: var(--spacing-200);
+        @media (min-width: 48rem) {
+            @include text-style(text-1);
+        }
+           
+    }
+     &__linck{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--black);
+            @include text-style(text-4);
+            text-transform: uppercase;
+            padding-top: var(--spacing-400);
+            width: 100%;
+            @media (min-width: 48rem) {
+                width: 14rem;
+            }
+        }  
+}
+.footer {
+    @media (min-width: 64rem) {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+            height: 100%;
+    }
+    &__content-box {
+        position: relative;
+        padding: var(--spacing-800) var(--spacing-300);
+        @media (min-width: 48rem) {
+            padding-inline: var(--spacing-800);
+        }
+    } 
+    &__title {
+        color: var(--black);
+        @include text-style(text-3-bold);
+        margin-bottom: var(--spacing-200);
+           
     }
 }
