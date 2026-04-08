@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const mainSections = document.querySelectorAll('.main');
 const leftBtn = document.querySelectorAll('.left-btn');
 const rightBtn = document.querySelectorAll('.right-btn');
@@ -12,6 +13,7 @@ opemMenuBtn.addEventListener('click', () => {
 
 closeMenuBtn.addEventListener('click', () => {
     overlay.classList.add('hidden');
+    overlay.classList.remove('page-down');
 }); 
 
 let index = 0;
@@ -37,5 +39,6 @@ rightBtn.forEach((btn) => {
         }
     mainSections[index].classList.remove('hidden');
     mainSections[index].classList.add('page-right');
+});
 });
 });
