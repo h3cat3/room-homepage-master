@@ -12,18 +12,32 @@
   <div class="card">
     <header>
       <nav class="nav">
-        <button class="nav__img-menu" aria-label="open menu">
+        <button id="open-menu" class="nav__img-menu" aria-label="open menu">
           <img src="./images/icon-hamburger.svg" alt="open menu">
         </button>
         <img class="nav__img-logo" src="./images/logo.svg" alt="room logo">
         <ul class="nav__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="nav__link"><a href="#">Home</a></li>
+          <li class="nav__link"><a href="#">Shop</a></li>
+          <li class="nav__link"><a href="#">About</a></li>
+          <li class="nav__link"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay__content">
+        <button id="close-menu" class="overlay__close-btn" aria-label="close menu">
+          <img src="./images/icon-close.svg" alt="close menu">
+        </button>
+        <ul class="overlay__links">
+          <li class="overlay__link"><a href="#">Home</a></li>
+          <li class="overlay__link"><a href="#">Shop</a></li>
+          <li class="overlay__link"><a href="#">About</a></li>
+          <li class="overlay__link"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
     <main >
       <section class="main">
         <picture>
@@ -32,10 +46,10 @@
         </picture>
         <div class="main__content-box">
           <div class="main__slider">
-            <button class="main__slider-btn" aria-label="previous slide">
-              <img src="./images/icon-angle-left.svg" alt="left">
+            <button class="main__slider-btn left-btn" aria-label="previous slide">
+              <img  src="./images/icon-angle-left.svg" alt="left">
             </button>
-            <button class="main__slider-btn" aria-label="next slide">
+            <button class="main__slider-btn right-btn" aria-label="next slide">
               <img src="./images/icon-angle-right.svg" alt="right">
             </button>
           </div>
@@ -49,17 +63,17 @@
         </div>
       </section>
   
-      <section class="main">
+      <section class="main main--layout hidden">
         <picture>
           <source media="(min-width: 1440px)" srcset="./images/desktop-image-hero-2.jpg">
           <img class="main__img" src="./images/mobile-image-hero-2.jpg" alt="three chairs, one yellow and 2 white.">
         </picture>
         <div class="main__content-box">
           <div class="main__slider">
-            <button class="main__slider-btn" aria-label="previous slide">
+            <button class="main__slider-btn left-btn" aria-label="previous slide">
               <img src="./images/icon-angle-left.svg" alt="left">
             </button>
-            <button class="main__slider-btn" aria-label="next slide">
+            <button class="main__slider-btn right-btn" aria-label="next slide">
               <img src="./images/icon-angle-right.svg" alt="right">
             </button>
           </div>
@@ -73,17 +87,17 @@
         </div>
       </section>
   
-      <section class="main">
+      <section class="main main--layout hidden">
         <picture>
           <source media="(min-width: 1440px)" srcset="./images/desktop-image-hero-3.jpg">
           <img class="main__img" src="./images/mobile-image-hero-3.jpg" alt="a black chair.">
         </picture>
         <div class="main__content-box">
           <div class="main__slider">
-            <button class="main__slider-btn" aria-label="previous slide">
+            <button class="main__slider-btn left-btn" aria-label="previous slide">
               <img src="./images/icon-angle-left.svg" alt="left">
             </button>
-            <button class="main__slider-btn" aria-label="next slide">
+            <button class="main__slider-btn right-btn" aria-label="next slide">
               <img src="./images/icon-angle-right.svg" alt="right">
             </button>
           </div>
@@ -110,6 +124,6 @@
       <img class="footer__img" src="./images/image-about-light.jpg" alt="a light collor chair in a middle of the picture.">
     </footer>
   </div>
-
+<script src="./script.js"></script>
 </body>
 </html>
